@@ -1,0 +1,37 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        
+        Scanner num1 = new Scanner(System.in);
+        Scanner num2 = new Scanner(System.in);
+        Scanner operator = new Scanner(System.in);
+        System.out.println("ENTER NO1:");
+        int n1= num1.nextInt();
+        System.out.println("ENTER NO2:");
+        int n2= num2.nextInt();
+        System.out.println("ENTER OPERATION:");
+        String op = operator.nextLine();
+        
+        // System.out.println(op.getClass());
+        if (op.equals("+") ){
+            System.out.println(n1+n2);
+           
+
+        }
+        else if (op.equals("-")){
+          System.out.println(n1-n2);
+        }
+        else if (op.equals("*")){
+             System.out.println(n1*n2);
+        }
+        else if (op.equals("/")) {
+             System.out.println(n1/n2);
+        }    
+        
+        
+        
+        
+    }
+}
