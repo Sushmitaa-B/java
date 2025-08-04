@@ -1,0 +1,47 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        String name = "sushmitaa";
+        System.out.println(name);
+        
+        int x = 5;
+        int y=3;
+        int a=x+y;
+        System.out.println(x+y);
+        System.out.println(a);
+        
+        float b=3;
+        int c=15;
+        System.out.println(b+c);
+        
+        int a= 20;
+        int b=16;
+        if (a>b){
+            System.out.println("a is elder than b");
+            
+        }
+        else{
+            
+        System.out.println("b is elder than a ");
+        
+        } 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+}
