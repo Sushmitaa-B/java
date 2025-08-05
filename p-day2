@@ -1,3 +1,9 @@
+//syntax:
+for (initial_condition; boolean_expression; iteration)
+ {
+ // loop block
+ }//
+
 public class Main
 {
 	public static void main(String[] args) {
