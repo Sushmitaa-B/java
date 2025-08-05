@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter your First Name: ");
+        String firstName = input.nextLine();
+
+        System.out.print("Enter your Initial (Single Character): ");
+        char initial = input.next().charAt(0);
+        input.nextLine();
+
+        System.out.print("Enter your Age: ");
+        short age = input.nextShort();
+        input.nextLine(); 
+
+        System.out.print("Enter your Phone Number: ");
+        long phoneNo = input.nextLong();
+        input.nextLine(); 
+
+        System.out.print("Enter your Email: ");
+        String email = input.nextLine();
+
+        System.out.print("Enter the OTP (numeric): ");
+        int otp = input.nextInt();
+
+        System.out.print("Enter your Weight (in kg): ");
+        float weight = input.nextFloat();
+
+        System.out.print("Enter your Height (in cm): ");
+        float height = input.nextFloat();
+
+        System.out.print("Enter your Annual Income (in ₹): ");
+        double income = input.nextDouble();
+
+        System.out.print("Are you a student? (true/false): ");
+        boolean isStudent = input.nextBoolean();
+
+        System.out.println("\n===== User Details =====");
+        System.out.println("Name         : " + firstName);
+        System.out.println("Initial      : " + initial);
+        System.out.println("Age          : " + age + " years");
+        System.out.println("Phone No.    : " + phoneNo);
+        System.out.println("Email        : " + email);
+        System.out.println("OTP Entered  : " + otp);
+        System.out.println("Weight       : " + weight + " kg");
+        System.out.println("Height       : " + height + " cm");
+        System.out.println("Annual Income: ₹" + income);
+        System.out.println("Is Student   : " + isStudent);
+
+        input.close();
+    }
+}
