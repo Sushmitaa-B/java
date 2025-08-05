@@ -1,3 +1,10 @@
+//syntax:
+ while (boolean_expression)
+ {
+ // loop block
+ }//
+
+
 import java.util.Scanner;
 public class Main
 {
