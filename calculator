@@ -1,4 +1,8 @@
-//syntax:
+//if statement
+ The if statement is used to execute a code block conditionally.  It surrounds a code 
+block, and that block will only be entered when the condition in the if statement 
+evaluates to true.
+syntax:
  if (boolean_expression1)
  {
  // One or more lines of code.
