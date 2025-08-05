@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner option = new Scanner (System.in);
+	    System.out.println("Enter your choice:");
+        System.out.println("1. Area of Circle");
+        System.out.println("2. Area of Triangle");
+        System.out.println("3. Area of Square");
+        System.out.println("4. Area of Rectangle");
+	    int choice = option.nextInt();
+        double area1,area2,area3,area4;
+
+        switch (choice) {
+            case 1:
+                Scanner r= new Scanner(System.in);
+                System.out.println("enter radius:");
+                int radius = r.nextInt();
+                area1=3.14*radius*radius;
+                System.out.println("Area of circle is " + area1 + " "+ "m^2");
+                
+                break;
+            case 2:
+                Scanner b= new Scanner(System.in);
+                System.out.println("enter base:");
+                int base = b.nextInt();
+                Scanner h= new Scanner(System.in);
+                System.out.println("enter height:");
+                int height = h.nextInt();
+                area2=0.5*base*height;
+                System.out.println("Area of triangle is " + area2 + " "+ "m^2");
+                break;
+            case 3:
+                Scanner s= new Scanner(System.in);
+                System.out.println("enter side");
+                int side = s.nextInt();
+                area3=side*side;
+                System.out.println("Area of square is " + area3 + " " + "m^2");
+                break;
+            case 4:
+                Scanner l= new Scanner(System.in);
+                System.out.println("enter length:");
+                int length = l.nextInt();
+                Scanner br= new Scanner(System.in);
+                System.out.println("enter breadth:");
+                int breadth = br.nextInt();
+                area4=length*breadth;
+                System.out.println("Area of rectangle is " + area4 + " "+ "m^2");
+            
+
+        }
+	}
+}
+       
+
