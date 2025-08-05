@@ -1,3 +1,26 @@
+//if statement
+ The if statement is used to execute a code block conditionally.  It surrounds a code 
+block, and that block will only be entered when the condition in the if statement 
+evaluates to true.
+syntax:
+ if (boolean_expression1)
+ {
+ // One or more lines of code.
+ } 
+                             
+else                         
+  // OPTIONAL
+ {                              
+// Yet more lines of code.
+ }     //
+
+// The while loop checks a condition before entering the loop, then executes the loop block 
+if the condition is true. The condition must be a boolean expression contained in 
+parentheses like the if statement. The syntax for the while loop is as follows:
+ while (boolean_expression)
+ {
+ // loop block
+ }//
 public class Main {
     public static void main(String[] args) {
         int num = 145;
