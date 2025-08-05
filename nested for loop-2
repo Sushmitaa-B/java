@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i;
+	    int j;
+	    Scanner num1 = new Scanner(System.in);
+	    Scanner num2 = new Scanner(System.in);
+	    System.out.println("enter no 1:");
+	    int n = num1.nextInt() ;
+	    
+	    System.out.println("enter no 2:");
+	    int m= num2.nextInt();
+		for(i=1;i<=n;i++){
+		    System.out.println("outer loop" + i);
+		    
+		    for(j=1;j<=m;j++){
+		        System.out.println("inner loop" + j); 
+		    }
+		}
+	}
+}
