@@ -8,10 +8,10 @@ public class Main
 	    while (no>=0){
 	        
 	        if (no %2 == 0){
-	            System.out.println( " It is a even number" + " " + no );
+	            System.out.println( no +" is a even number");
 	        }
 	        else{
-	             System.out.println("It is a odd number" +  " " + no);
+	             System.out.println( no +" is a odd number");
 	        }
 	        no--;
 	    }
