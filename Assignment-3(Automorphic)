@@ -1,0 +1,40 @@
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner n=new Scanner (System.in);
+	    System.out.println("Enter Number:");
+	    int num= n.nextInt();
+	    
+	    int square= num*num;
+	    
+	    
+	    
+	    int length = 0;
+	    int temp = num;
+	    if (temp == 0) {
+	        length = 1;
+	        
+	    } 
+	    else {
+	        while (temp != 0) {
+	            temp /= 10;
+	            length++;
+	            
+	        }
+	        
+	    }
+        System.out.println("Length: " + length); 
+        double d =Math.pow(10,length);
+	    if(square%d==num){
+	        System.out.println(num + " is an Automorphic number");
+	        
+	    }
+	     else {
+	         System.out.println(num + " is NOT an Automorphic number");
+	         
+	     }
+		
+	}
+}
