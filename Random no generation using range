@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        System.out.print("ENTER STARTING VALUE: ");
+        int n1 = s.nextInt();
+
+        System.out.print("ENTER ENDING VALUE: ");
+        int n2 = s.nextInt();
+
+        if (n1 > n2) {
+            System.out.println("Starting value must be less than or equal to ending value.");
+        } else {
+            int rn = n1 + (int)(Math.random() * (n2 - n1 + 1));
+            System.out.println("Random number between " + n1 + " and " + n2 + " is: " + rn);
+        }
+
+        
+    }
+}
