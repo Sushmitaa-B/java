@@ -1,0 +1,41 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sr = new Scanner (System.in);
+	    System.out.println("ENTER STARTING RANGE :");
+	    int s=sr.nextInt();
+	    Scanner er = new Scanner (System.in);
+	    System.out.println("ENTER ENDING RANGE :");
+	    int e=er.nextInt();
+	    Scanner number = new Scanner (System.in);
+	    System.out.println("ENTER NUMBER TO FIND PROBABILITY :");
+	    int num=number.nextInt();
+	    
+
+	    int count=0;
+	   
+	    
+	    
+	    for (int i=s;i<=e;i++){
+	        for(int j=1;j<=e;j++){
+	            if(i + j ==num){
+	                System.out.println(i + " + " + j + " = " + num);
+	                count ++;
+	        }
+	        
+	        }
+	    }
+	     System.out.println("Total count: " + count);
+	    
+	    
+		
+	}
+}
