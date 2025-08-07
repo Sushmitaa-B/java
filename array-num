@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+
+        System.out.println("Enter number of elements: ");
+        int size = x.nextInt();  
+        int[] arr = new int[size];
+
+        System.out.println("Enter the elements: ");
+        for (int i = 0; i < size; i++) {   
+            arr[i] = x.nextInt();  
+            
+        }
+
+        System.out.println("You entered:");
+        for (int num : arr) {
+            System.out.println(num);
+        }
+        int usize = Math.max(0, size - 2); 
+        int[] Arr = new int[usize];
+
+        for (int i = 0; i < usize; i++) {
+            Arr[i] = arr[i];
+        }
+
+        System.out.println("After deleting last two names:");
+        for (int list : Arr) {
+            System.out.println(list);
+        }
+    }
+}
