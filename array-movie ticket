@@ -116,31 +116,8 @@ public class Main
 
 
 
-/******************************************************************************
 
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
 
-*******************************************************************************/
-import static java.lang.Math.*; 
-import java.util.Scanner;
-public class Main
-{
-	public static void main(String[] args) {
-	    Scanner s= new Scanner(System.in);
-	    System.out.println("ENTER STARTING VALUE :");
-	    int n1=s.nextInt();
-	    
-	    Scanner e= new Scanner(System.in);
-	    System.out.println("ENTER ENDING VALUE :");
-	    int n2=e.nextInt();
-	    
-	    
-		int rn= (n1 + Math.random()*((n1+n2)+1));
-		System.out.println(rn);
-	}
-}
 
 
 
