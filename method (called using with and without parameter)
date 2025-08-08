@@ -77,17 +77,6 @@ public class Main
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
 (* without parameter *)
 public class Main
 {
@@ -102,3 +91,79 @@ public class Main
 		
 	}
 }
+
+
+//instance object//
+
+//syntax:
+modifier returntype name(){
+//body of the method
+}//
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Main obj = new Main ();
+	    obj.sample();
+
+	}
+	
+	public void sample(){
+	    int a=10;
+	    System.out.println(a);
+	    
+	    
+	} 
+}
+
+
+ class Main
+{
+	public static void main(String[] args) {
+//below we called the Main1 instead of Main beacuse,we need to call the class name where we created instance object//
+	    Main1 obj = new Main1 ();
+	    obj.add();
+
+	}
+}
+
+ class Main1{
+    public void add(){
+	    int a=10;
+	    int b= 15;
+	    System.out.println(a + b);
+	    
+	    
+	} 
+}
+
+
+//using sub classes //
+ class Main
+{
+	public static void main(String[] args) {
+	    Addition obj = new Addition ();
+	    obj.add(10,20);
+	    Subtraction ob = new Subtraction ();
+	    ob.sub(30,12);
+
+	}
+}
+
+ class Addition{
+    public void add(int a, int b){  
+	    
+	    System.out.println(a + b);
+	    
+	    
+	} 
+}class Subtraction{
+    public void sub(int c,int d){
+	    
+	    System.out.println(c - d);
+	    
+	    
+	} 
+}
+
