@@ -1,0 +1,104 @@
+(* with parameter *)
+public class Main
+{
+	public static void mymethod(String name){
+	    System.out.println(name);
+	}
+	
+	
+	
+	public static void main(String[] args) {
+	    mymethod("Sushmitaa");
+		
+	}
+}
+
+(*with parameter addition  *)
+
+public class Main
+{
+	public static void mymethod(int x,int y){
+	    System.out.println( x + y);
+	    
+	}
+	
+	
+	
+	public static void main(String[] args) {
+	    mymethod(5,5);
+		
+	}
+}
+(*with parameter-first name,last name  *)
+public class Main
+{
+	public static void mymethod(String name,String lname){
+	    System.out.println(name+" "+lname);
+	}
+	
+	
+	
+	public static void main(String[] args) {
+	    mymethod("Sushmitaa","Tarshita");
+		
+	}
+}
+(* with parameter-personal details *)
+
+public class Main
+{
+	public static void mymethod(String name,String lname,int age,Double height){
+	    System.out.println(name+" "+lname+" "+age+"years"+" "+height+"cm");
+	}
+	
+	
+	
+	public static void main(String[] args) {
+	    mymethod("Sushmitaa","Baskaran",19,150.00);
+		
+	}
+}
+(* with parameter -using return *)
+public class Main
+
+{
+	public static int mymethod(int x,int y){
+	    return x + y;
+	   
+	    
+	}
+	
+	
+	
+	public static void main(String[] args) {
+	    System.out.println(mymethod(5,5));
+	    System.out.println(mymethod(6,9));
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+(* without parameter *)
+public class Main
+{
+	public static void mymethod(){
+	    System.out.println("Sushmitaa");
+	}
+	
+	
+	
+	public static void main(String[] args) {
+	    mymethod();
+		
+	}
+}
