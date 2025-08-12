@@ -1,0 +1,296 @@
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner x = new Scanner(System.in);
+	    System.out.println("ENTER YOUR NAME:");
+	    //charAt()
+	    String n=x.nextLine();
+	    char mystr= n.charAt(0);
+		System.out.println(mystr);
+		//codePointAt()
+	    int my= n.codePointAt(3);
+		System.out.println(my);
+		//codePointBefore();
+		int m =n.codePointBefore(8);
+		System.out.println(m);
+		
+		
+		
+	}
+}
+output:
+sushmitaa
+s
+104
+97
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner x = new Scanner(System.in);
+	    System.out.println("ENTER YOUR NAME:");
+	    String n=x.nextLine();
+	    System.out.println("ENTER YOUR NAME:");
+	    String n1=x.nextLine();
+		//codePointCount()
+		int s= n.codePointCount(3,9);
+		System.out.println(s);
+		//compareTo()
+		int res=n.compareTo(n1);
+		System.out.println(res);
+		
+		
+	}
+}
+output:
+ENTER YOUR NAME:
+sushmitaa
+ENTER YOUR NAME:
+sushmitaa
+6
+0
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner x = new Scanner(System.in);
+	    System.out.println("ENTER :");
+	    String n=x.nextLine();
+	    System.out.println("ENTER YOUR NAME:");
+	    String n1=x.nextLine();
+		
+		//compareToIgnoreCase()
+		int res=n.compareToIgnoreCase(n1);
+		System.out.println(res);
+		//concat()
+		String q=n.concat(" "+n1);
+		System.out.println(q);
+		
+	}
+}
+output:
+ENTER :
+sushmitaa
+ENTER YOUR NAME:
+baskaran
+17
+sushmitaa baskaran
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner x = new Scanner(System.in);
+	    System.out.println("Enter :");
+	    String n=x.nextLine();
+		
+		//contains()
+		System.out.println(n.contains("h"));
+		System.out.println(n.contains("r"));
+		
+ 		//contentEquals()
+        System.out.println(n.contentEquals("lived"));
+		System.out.println(n.contentEquals("mi"));
+		
+	}
+}
+
+output:
+Enter :
+once upon a time there lived a ghost!
+true
+true
+false
+false
+
+public class Main
+{
+	public static void main(String[] args) {
+	   
+	   char[] data ={'H','E','L','L','O'};
+	   
+	   //copyValueOf()
+	   String s =String.copyValueOf(data,0,5);
+	   System.out.println(s);
+		
+		
+ 	   //endsWith()
+       System.out.println(s.endsWith("LO"));
+		//equals()
+       System.out.println(s.equals("HELLLO"));
+    //equalsIgnoreCase()
+       System.out.println(s.equalsIgnoreCase("hello"));
+       
+		
+	}
+}
+output:
+HELLO
+true
+false
+true
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    //format()
+	    Scanner n=new Scanner(System.in);
+	    System.out.println("Name:");
+	    String name=n.nextLine();
+	    Scanner a=new Scanner(System.in);
+	    System.out.println("Age:");
+	    int age = a.nextInt();
+	   
+	   String hi="Hi, my name is %s ,my age is %d";
+	   
+	   System.out.println(hi.format(hi,name,age));
+	   System.out.println(hi.format(hi,"tarshita",17));
+	   System.out.printf(hi,"ashwin",14);
+		
+	}
+}
+output:
+Name:
+sushmitaa
+Age:
+19
+Hi, my name is sushmitaa ,my age is 19
+Hi, my name is tarshita ,my age is 17
+Hi, my name is ashwin ,my age is 14
+
+public class Main
+{
+	public static void main(String[] args) {
+	    //getChars()
+	    char[] data={'0','1','2','3','4','5','6','7','8','9'};
+		System.out.println(data);
+		
+		String mystr="Hello world!";
+		mystr.getChars(6,11,data,4);
+		System.out.println(data);
+		
+		
+	}
+}
+output;
+0123456789
+0123world9
+
+public class Main
+{
+	public static void main(String[] args) {
+	    //getChars()
+	    char[] data={'3','0','2','7','4','5','6','7','8','9','1','2','3'};
+		System.out.println(data);
+		
+		String mystr="Sushmitaa";
+		mystr.getChars(0,9,data,4);
+		System.out.println(data);
+		
+		
+	}
+}
+output:
+3027456789123
+3027Sushmitaa
+
+public class Main
+{
+	public static void main(String[] args) {
+	    //getBytes()
+	   
+		
+		String name="Sushmitaa";
+		byte[] arr=name.getBytes();
+		
+		System.out.println(arr[0]);
+		
+		
+	}
+}
+output:
+83
+
+
+
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    //hashCode()
+	    String n="Sushmitaa baskaran";
+	    System.out.println(n.hashCode());
+// 		char y= 'H';
+// 		System.out.println(y.hashCode());
+		
+		//toUpperCase() and toLowerCase()
+		String name="Sushmitaa baskaran";
+		System.out.println(name.toUpperCase());
+		System.out.println(name.toLowerCase());
+		
+		//indexOf()
+		System.out.println(name.indexOf("baskaran"));
+		String r="hi,my name is sushmitaa and i am from pudukkottai,i am pursuing my degree B.Tech in Artificial Intelligence and Data Science";
+		System.out.println(r.indexOf("pudukkottai"));
+		
+		//isEmpty()
+		String s1="Hello World";
+		String s2="";
+		System.out.println(s1.isEmpty());
+		System.out.println(s2.isEmpty());
+		
+		
+	}
+}
+
+output:
+118233652
+SUSHMITAA BASKARAN
+sushmitaa baskaran
+10
+38
+false
+true
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    //join()
+	    String name=String.join(" ","Sushmitaa","Tarshita","Ashwin");
+	    System.out.println(name);
+	    
+		
+		
+	}
+}
+output:
+Sushmitaa Tarshita Ashwin
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    //lastIndexOf()
+	    String name="Sushmitaa baskaran";
+	    System.out.println(name.lastIndexOf("baskaran"));
+	    
+	    //length
+	     System.out.println(name.length());
+		
+		
+	}
+}
+output:
+10
+18
+
+
