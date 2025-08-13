@@ -523,3 +523,24 @@ SUSHMITAA
 sushmitaa
 sushmitaa
 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner data = new Scanner(System.in);
+        System.out.print("Enter name : ");
+        String x = data.nextLine();
+        System.out.println(x);
+        //trim()
+        System.out.println(x.trim());
+        //valueOf()
+        System.out.println(String.valueOf(x));
+         }
+}
+output:
+Enter name :          sushmitaa baskaran
+         sushmitaa baskaran
+sushmitaa baskaran
+         sushmitaa baskaran
+
