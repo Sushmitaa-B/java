@@ -293,4 +293,233 @@ output:
 10
 18
 
+public class Main
+{
+	public static void main(String[] args) {
+	    String a="New World";
+	    String y=" Hello World";
+	    String x=" Hello|World|Java";
+	    //matches()
+		System.out.println("Hello".matches(y));
+		System.out.println("World".matches(x));
+		System.out.println("Javascript".matches(x));
+		//regionMatches()
+		System.out.println(y.regionMatches(7,a,4,5));
+		
+        
+	}
+}
+ouptut:
+false
+true
+false
+true
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    String x=" Hello";
+	    String y="Hello sushmitaa Hello";
+	    //replace()
+	    System.out.println(x.replace('l','p'));
+	    //replaceAll()
+	    String a="(?i),Hello";
+	    System.out.println(y.replaceAll(a,"Hi"));
+	    //replaceFirst()
+	    String b="Hello";
+	    System.out.println(y.replaceFirst(b,"hi"));
+
+		
+        
+	}
+}
+output:
+ Heppo
+Hello sushmitaa Hello
+hi sushmitaa Hello
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	     //split()
+	    Scanner a= new Scanner(System.in);
+	    System.out.println("Enter:");
+	    String x=a.nextLine();
+	    String y="[,\\ .\\s]";
+	    String[] z=x.split(y);
+	    for(String s:z){
+	        System.out.println(s);
+	    }
+	   
+	    
+	    
+		
+        
+	}
+}
+output:
+Enter:
+once upon a time a time there lived a ghost
+once
+upon
+a
+time
+a
+time
+there
+lived
+a
+ghost
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	     //split()
+	   // Scanner a= new Scanner(System.in);
+	   // System.out.println("Enter:");
+	    String x="Hello guys";
+	    String y="[,\\ .\\s]";
+	    String[] z=x.split(y);
+	    for(String s:z){
+	        System.out.println(s);
+	    }
+        
+	}
+}
+output:
+Hello
+guys
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner a= new Scanner(System.in);
+	    System.out.println("Enter:");
+	    String x=a.nextLine();
+	    String b="sushmitaa";
+	    //replace()
+	    System.out.println(x.replace('a','A'));
+	    //replaceAll()
+	    System.out.println(x.replaceAll(x,"Replaced all words successfully !"));
+	    //replaceFirst()
+	    System.out.println(x.replaceFirst(b,"Hello Sushmitaa"));
+	    //split()
+	    String y="[,\\ .\\s]";
+	    String[] z=x.split(y);
+	    for(String s:z){
+	        System.out.println(s);
+	    }
+	   //concat()
+	   String c=z[0];
+	   String d=z[1];
+	   System.out.println(c.concat(" "+d));
+	}
+}
+output:
+Enter:
+sushmitaa baskaran
+sushmitAA bAskArAn
+Replaced all words successfully !
+Hello Sushmitaa baskaran
+sushmitaa
+baskaran
+sushmitaa baskaran
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner a= new Scanner(System.in);
+	    System.out.println("Enter:");
+	    String x=a.nextLine();
+	    //startsWith()
+	    System.out.println(x.startsWith("hello"));
+	    System.out.println(x.startsWith("Hello"));
+        System.out.println(x.startsWith("he"));
+	}
+}
+output:
+Enter:
+hello sushmitaa
+true
+false
+true
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    
+	    String x="SushmitaaBaskaran";
+	    System.out.println(x);
+	   
+	    //substring()
+	    String a= x.substring(0,9);
+	    System.out.println(a);
+	    String b=x.substring(9,17);
+	    System.out.println(b);
+	    //subSequence()
+	    System.out.println(x.subSequence(9,17));
+	    
+	    //concat()
+	    String o=a.concat(" "+b);
+	    System.out.println(o);
+
+	}
+}
+output:
+SushmitaaBaskaran
+Sushmitaa
+Baskaran
+Baskaran
+Sushmitaa Baskaran
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner data=new Scanner(System.in);
+	    System.out.println("Enter:");
+	    String x=data.nextLine();
+	    System.out.println(x);
+	   
+	    //toCharArray()
+	    char[] y=x.toCharArray();
+	    for(char c:y){
+	        System.out.println(c);
+	    }
+	    
+	    //toUpperCase()
+	    System.out.println(x.toUpperCase());
+	    //toLowerCase()
+	    System.out.println(x.toLowerCase());
+	    //toString()
+	    String m=x.toString();
+	    System.out.println(m);
+	}
+}
+output:
+Enter:
+sushmitaa
+sushmitaa
+s
+u
+s
+h
+m
+i
+t
+a
+a
+SUSHMITAA
+sushmitaa
+sushmitaa
 
