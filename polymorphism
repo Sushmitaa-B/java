@@ -1,0 +1,184 @@
+//polymorphism
+class Vehicle{
+    public void drive(){
+        System.out.println("Drive");
+    }}
+    
+class Bike extends Vehicle{
+    @Override
+    public  void drive(){
+        System.out.println("Driving Bike");
+    }}
+class Car extends Vehicle{
+    @Override
+    public void drive(){
+        System.out.println("Driving Car");
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Vehicle a;
+	    a=new Bike();
+	    a.drive();
+	    
+	    a=new Car();
+	    a.drive();
+	    
+	    a=new Vehicle();
+	    a.drive();
+	}
+}
+
+output:
+Driving Bike
+Driving Car
+Drive
+
+
+
+
+// Example of Overriding in Java
+class Animal {
+    
+    void move() { System.out.println(
+      "Animal is moving."); }
+    void eat() { System.out.println(
+      "Animal is eating."); }
+}
+
+class Dog extends Animal {
+    @Override void move()
+    { // move method from Base class is overriden in this
+      // method
+        System.out.println("Dog is running.");
+    }
+    void bark() { System.out.println("Dog is barking."); }
+}
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Dog d = new Dog();
+        d.move(); // Output: Dog is running.
+        d.eat(); // Output: Animal is eating.
+        d.bark(); // Output: Dog is barking.
+    }
+}
+output:
+Dog is running.
+Animal is eating.
+Dog is barking.
+//polymorphism (overriding)
+class Payment{
+    public void mode(){
+        System.out.println("Payment");
+    }}
+    
+class UPI extends Payment{
+    @Override
+    public  void mode(){
+        System.out.println("UPI");
+    }}
+class credit extends Payment{
+    @Override
+    public void mode(){
+        System.out.println("credit");
+    }
+}
+class Bank_transfer extends Payment{
+    @Override
+    public void mode(){
+        System.out.println("Bank transfer");
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Payment a;
+	    a=new UPI();
+	    a.mode();
+	    
+	    a=new credit();
+	    a.mode();
+	    
+	     a=new Bank_transfer();
+	    a.mode();
+	    
+	     a=new Payment();
+	    a.mode();
+	    
+	}
+}
+output:
+UPI
+credit
+Bank transfer
+Payment
+
+
+public class Main
+{
+	public static void main(String[] args)
+	{   int i=1;
+	    int j=i++ + ++i;
+	
+		System.out.println("value:"+j);
+	}
+}
+output:
+value:4
+///override
+class Employee_salary{
+    public void salary(){
+        System.out.println("Salary Details");
+    }}
+    
+class Manager extends Employee_salary{
+    @Override
+    public  void salary(){
+        System.out.println("Manager:80k");
+    }}
+class HR extends Employee_salary{
+    @Override
+    public void salary(){
+        System.out.println("HR:75k");
+    }
+}
+class Developer extends Employee_salary{
+    @Override
+    public void salary(){
+        System.out.println("Developer:60k");
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Employee_salary a;
+	    
+	     a=new Employee_salary();
+	     a.salary();
+	     
+	    a=new Manager();
+	    a.salary();
+	    
+	    a=new HR();
+	    a.salary();
+	    
+	     a=new Developer();
+	    a.salary();
+	    
+	    
+	    
+	}
+}
+output:
+Salary Details
+Manager:80k
+HR:75k
+Developer:60k
+
+
