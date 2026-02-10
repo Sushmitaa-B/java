@@ -1,0 +1,328 @@
+
+//1.Get an input from user (for all datatypes int,str,char)
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    
+	    byte by=sc.nextByte();
+		System.out.println(by);
+		
+		short sh=sc.nextShort();
+		System.out.println(sh);
+		
+	    int num= sc.nextInt();
+		System.out.println(num);
+		
+		float dec= sc.nextFloat();
+		System.out.println(dec);
+		
+		long l=sc.nextLong();
+		System.out.println(l);
+		
+		double point= sc.nextDouble();
+		System.out.println(point);
+		
+		String str= sc.next();
+		System.out.println(str);
+		sc.nextLine();//this code used, only we get the string next line in the middle .
+		//if we use them in the beginning there is no need to use it .
+		
+		String str1= sc.nextLine();
+		System.out.println(str1);
+		
+		char alphabet= sc.next().charAt(2);
+		System.out.println(alphabet);
+	}
+}
+
+OUTPUT:
+30
+30
+10
+10
+999
+999
+20.6
+20.6
+100
+100
+20.668
+20.668
+sushmitaa
+sushmitaa
+hello guys 
+hello guys 
+sushmitaa
+s
+
+
+// 2.Sum of the digits
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        int a=sc.nextInt();
+        int sum=0;
+        while(a!=0){
+            int r=a%10;
+            sum+=r;
+            a=a/10;
+            
+        }
+        System.out.println(sum);
+        
+    }
+}
+
+OUTPUT:
+12345
+15
+
+// 3.Reverse of the digits
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        int a=sc.nextInt();
+        int rev=0;
+        while(a!=0){
+            int r=a%10;
+            rev=rev*10+r;
+            a=a/10;
+            
+        }
+        System.out.println(rev);
+        
+    }
+}
+OUTPUT:
+3694
+4963
+
+// 4.To check whether a number is a palindrome or not
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=a;
+		int rev=0;
+		while(a!=0) {
+			int r=a%10;
+			rev=rev*10+r;
+			a=a/10;
+
+		}
+		System.out.println(rev);
+		if(b==rev) {
+			System.out.println(b + " is a Palindrome");
+		}
+		else {
+		    System.out.println(b + " is not a Palindrome");
+		}
+	
+
+	}
+}
+
+OUTPUT:
+1331
+1331
+1331 is a Palindrome
+
+396
+693
+396 is not a Palindrome
+
+
+5.
+//Upper to lower and lower to upper case without using function
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      char alpha=sc.next().charAt(0);
+      
+      
+        if(alpha>=65 && alpha<=90){
+          System.out.println((char)(alpha+32));
+        }
+        else if(alpha>=97 && alpha<=120){
+          System.out.println((char)(alpha-32));
+        }
+        else{
+          System.out.println(alpha);
+        }
+      }
+    }
+
+OUTPUT:
+j
+J
+  or
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      char alpha=sc.next().charAt(0);
+      
+      
+        if(alpha>='A' && alpha<='Z'){
+          System.out.println((char)(alpha+32));
+        }
+        else if(alpha>='a' && alpha<='z'){
+          System.out.println((char)(alpha-32));
+        }
+        else{
+          System.out.println(alpha);
+        }
+      }
+    }
+
+OUTPUT:
+S
+s
+
+
+6.power finding using a,b 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int a=sc.nextInt();
+      int b=sc.nextInt();
+      int s=1;
+      for(int i=0;i<b;i++){
+          s*=a;
+      }
+      System.out.println(s);
+    }
+}
+OUTPUT:
+3
+3
+27
+
+
+2
+6
+64
+
+
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+       Scanner sc= new Scanner (System.in);
+      int num= sc.nextInt();
+      
+      for(int i=0;i<=num;i++){
+       
+         System.out.println(i);
+        
+      
+    }
+   
+}
+}
+
+
+// 4.To check whether a number is a palindrome or not
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int a=sc.nextInt();
+		int min=1;
+		while(a!=0) {
+			int r=a%10;
+			if(min>r){
+			    min=r;
+			}
+			
+			a=a/10;
+
+		}
+		System.out.println(min);
+	
+
+	}
+}
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      int num=sc.newInt();
+      int count=0;
+      for(int )
+      }
+    }
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner (System.in);
+      int num= sc.nextInt();
+      int count=0;
+      for(int i=2;i<=num/2;i++){
+        count++;
+      }
+      count=count+2;
+      if(count==2){
+        System.out.println("yes");
+      }
+      else{
+        System.out.println("no");
+      }
+    }
+}
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        Scanner sc= new Scanner(System.in);
+        
+        int cost1=sc.nextInt();
+        int quantity1=sc.nextInt();
+        int cost2=sc.nextInt();
+        int quantity2=sc.nextInt();
+        int cost3=sc.nextInt();
+        int quantity3=sc.nextInt();
+        int budget=sc.nextInt();
+        float b_tax=((cost1*quantity1)+(cost2*quantity2)+(cost3*quantity3));
+        double a_tax= b_tax +(0.10*b_tax);
+        System.out.printf("Total (Before Tax):"+" "+b_tax);
+        System.out.printf("Total (After Tax):"+" "+".2f",a_tax);
+        if(a_tax<=budget){
+            
+            System.out.println("Within Budget");
+        }
+        else{
+            System.out.println("Over Budget");
+        }
+        
+        
+    }
+}
+
+
+
+
+
