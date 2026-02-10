@@ -290,6 +290,7 @@ public class Main {
 }
 
 
+//hakkerrank
 import java.io.*;
 import java.util.*;
 
@@ -297,28 +298,37 @@ public class Solution {
 
     public static void main(String[] args) {
 
-        Scanner sc= new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
-        int cost1=sc.nextInt();
-        int quantity1=sc.nextInt();
-        int cost2=sc.nextInt();
-        int quantity2=sc.nextInt();
-        int cost3=sc.nextInt();
-        int quantity3=sc.nextInt();
-        int budget=sc.nextInt();
-        float b_tax=((cost1*quantity1)+(cost2*quantity2)+(cost3*quantity3));
-        double a_tax= b_tax +(0.10*b_tax);
-        System.out.printf("Total (Before Tax):"+" "+b_tax);
-        System.out.printf("Total (After Tax):"+" "+".2f",a_tax);
-        if(a_tax<=budget){
-            
+        // Read input for the cost and quantity of three items, plus the total budget
+        int cost1 = sc.nextInt();
+        int quantity1 = sc.nextInt();
+        int cost2 = sc.nextInt();
+        int quantity2 = sc.nextInt();
+        int cost3 = sc.nextInt();
+        int quantity3 = sc.nextInt();
+        int budget = sc.nextInt();
+        
+        // Calculate the total cost before tax
+        float b_tax = ((cost1 * quantity1) + (cost2 * quantity2) + (cost3 * quantity3));
+        
+        // Calculate the total cost after applying a 10% tax
+        double a_tax = b_tax + (0.10 * b_tax);
+        
+        // Print the total cost before tax
+        System.out.printf("Total (Before Tax): %.2f%n", b_tax);
+        
+        // Print the total cost after tax, formatted to two decimal places
+        System.out.printf("Total (After Tax): %.2f%n", a_tax);
+        
+        // Check if the after-tax total is within or over the budget
+        if (a_tax <= budget) {
             System.out.println("Within Budget");
-        }
-        else{
+        } else {
             System.out.println("Over Budget");
         }
         
-        
+        sc.close(); // Close the scanner to prevent resource leaks
     }
 }
 
