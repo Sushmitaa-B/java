@@ -1,0 +1,437 @@
+5.Even Odd Split
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n= sc.nextInt();
+        int arr[]= new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            if(arr[i]%2==0){
+            System.out.print(arr[i]+" ");
+            
+            }
+            
+        }
+        System.out.println();
+        for (int i=0;i<n;i++){
+            //if (arr[i]%2==1 || arr[i]%2==-1)
+             if(arr[i]%2!=0){
+                System.out.print(arr[i]+" ");
+            }
+       
+           
+        }
+        
+        
+    }
+}
+
+
+5
+1
+2
+3
+4
+5
+Output:
+
+44 ms | 46.3 MB
+2 4 
+1 3 5 
+6.average of an element
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n= sc.nextInt();
+        int arr[]= new int[n];
+        double sum=0;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            sum+=arr[i];
+            } 
+        System.out.printf("%.2f",sum/n);
+        }
+        
+        
+        
+        
+    
+        
+        
+    }
+
+5
+2
+4
+6
+8
+10
+Output:
+
+43 ms | 46.3 MB
+6.00
+7.search an element
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        
+        
+        for(int i = 0; i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+        int s=sc.nextInt();
+        
+        for(int i=0;i<n;i++){
+          if(arr[i]==s){
+            
+                System.out.println(i);
+                return;
+          }
+          
+        }
+         System.out.println(-1);
+        
+        }
+        
+        }     
+    
+5
+1 2 3 4 5
+3
+Output:
+
+41 ms | 45.8 MB
+2
+
+8.Find the Maximum Element in an Array
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int size=sc.nextInt();
+        //array
+        int arr []=new int [size];
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<size;i++){
+          arr[i]=sc.nextInt();
+          if(arr[i]>max){
+            max=arr[i];
+            
+          }
+          
+        }
+        System.out.println(max);
+        
+        
+    }
+}
+
+
+5
+1 2 3 4 5
+3
+Output:
+2
+
+
+5
+-3 -7 -1 -9 -4
+Output:
+-1        
+
+
+9.Find the Minimum Element in an Array
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int size=sc.nextInt();
+        //array
+        int arr []=new int [size];
+        int min=Integer.MAX_VALUE;
+        for(int i=0;i<size;i++){
+          arr[i]=sc.nextInt();
+          if(arr[i]<min){
+            min=arr[i];
+            
+          }
+          
+        }
+        System.out.println(min);
+        
+        
+    }
+}
+
+5
+-3 -7 -1 -9 -4
+Output:
+-9
+
+5
+2 8 1 6 3
+output:
+1     
+
+10.Alternate Index Product
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        
+        int arr []=new int [n];
+        for(int i=0;i<n;i++){
+           arr[i]=sc.nextInt();
+        }
+        int eproduct=1;
+        int oproduct=1;
+        for(int i=0;i<n;i++){
+            if(i%2==0){
+                eproduct*=arr[i];
+            }
+            else{
+                oproduct*=arr[i];
+            }
+        }
+        System.out.println(eproduct);
+        System.out.println(oproduct);
+        
+        
+    }
+}
+
+5
+1 2 3 4 5
+Sample Output 0
+
+15
+8
+
+5
+2 0 4 5 6
+Sample Output 1
+
+48
+0
+
+11.Find Pair with Given Sum
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n= sc.nextInt();
+        int s=sc.nextInt();
+        int arr[]= new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+                       
+            }
+        for(int i=0;i<n;i++){
+          for(int j=i+1;j<n;j++){
+                 if(arr[i]+arr[j]==s){
+                 System.out.println("Yes");
+                 return;
+                 }
+                     
+          }
+             }
+             System.out.println("No");
+        }       
+      
+        
+    }
+
+
+5 9
+2 4 3 5 7
+Output:
+
+44 ms | 45.7 MB
+Yes
+
+12.Find Maximum Product of Two Elements in an Array
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n= sc.nextInt();
+        
+        
+        int arr[]= new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+                       
+            }
+             int max=Integer.MIN_VALUE;
+        
+        for(int i=0;i<n;i++){
+          for(int j=i+1;j<n;j++){
+                 if(arr[i]*arr[j]>max){
+                   max=arr[i]*arr[j];
+                   
+                 }
+          }
+             }System.out.println(max);
+            
+        }
+        
+        
+        
+    }
+
+5
+2 4 3 5 7
+Your Output 
+35
+
+13.Find the Second Maximum Element in an Array
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+        for(int i = 0; i < size; i++){
+            arr[i] = sc.nextInt();
+        }
+        int max = arr[0];
+        int smax = arr[1];
+        if(max < smax){
+            int temp = max;
+            max = smax;
+            smax = temp;
+        }
+        for(int i = 2; i < size; i++){
+            if(arr[i] > max){
+                smax = max;
+                max = arr[i];
+            }
+            else if(arr[i] > smax && arr[i] != max){
+                smax = arr[i];
+            }
+        }
+
+        System.out.println(smax);
+    }
+}
+
+
+5
+2 8 1 6 3
+Output:
+
+68 ms | 46.3 MB
+6
+
+
+14.Find Leader Elements in an Array
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int [n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+          int f=0;
+            for(int j=i+1;j<n;j++){
+               if(arr[i]<arr[j]){
+                 f=1;
+                 break;
+               }
+            }
+            if(f==0){
+            System.out.print(arr[i]+" ");
+            }
+        }
+        
+    }
+}
+
+6
+16 17 4 3 5 2
+Your Output (stdout)
+
+17 5 2 
+
+15.Find Mid element of an Array
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int [n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+       
+        if(n%2!=0){
+            System.out.println(arr[n/2]);
+        }
+        
+        else{
+            System.out.println((arr[(n/2)-1]+arr[n/2])/2);
+        }
+                
+    }
+}
+
+5
+10 30 20 50 40
+Sample Output 0
+
+20
+
+
+
+
+
+
+       
+        
