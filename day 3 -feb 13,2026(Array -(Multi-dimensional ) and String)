@@ -1,0 +1,429 @@
+1.//2D array 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      // int arr[][]={{1,2,3},{4,5,6},{7,8,9}};//compile time
+      int rsize=sc.nextInt();
+      int csize=sc.nextInt();
+      int arr[][]=new int [rsize][csize];
+      
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){
+          arr[i][j]=sc.nextInt();
+          
+        }
+      }
+      
+      
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){
+          System.out.print(arr[i][j]+" ");
+          
+        }
+        System.out.println();
+      }
+      
+    }
+}
+
+
+3
+3
+1 2 3 
+ 4 5 6
+7 8 9
+Output:
+1 2 3 
+4 5 6 
+7 8 9 
+
+2.//sum of all elements in a 2D array
+  
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      // int arr[][]={{1,2,3},{4,5,6},{7,8,9}};//compile time
+      int rsize=sc.nextInt();
+      int csize=sc.nextInt();
+      int arr[][]=new int [rsize][csize];
+      
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){
+          arr[i][j]=sc.nextInt();
+          
+        }
+      }
+      
+      int sum=0;
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){        
+          sum+=arr[i][j];          
+         }
+      }
+      System.out.print(sum);
+      
+    }
+}
+
+3
+3
+1 2 3 
+ 4 5 6
+7 8 9
+Output:
+45 
+
+3.// sum of all corner elements in a 2D array (border elements)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      // int arr[][]={{1,2,3},{4,5,6},{7,8,9}};//compile time
+      int rsize=sc.nextInt();
+      int csize=sc.nextInt();
+      int arr[][]=new int [rsize][csize];
+      
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){
+          arr[i][j]=sc.nextInt();
+          
+        }
+      }
+      
+      int sum=0;
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){
+          //i==0 means 0 th row ,j==0 means last row and i==rsize-1 means last row 
+          if(i==0 || j==0 || i==rsize-1|| j==csize-1){
+            sum+=arr[i][j];
+           }          
+        }}
+      System.out.print(sum);
+      }
+}
+
+3
+3
+1 2 3 
+ 4 5 6
+7 8 9
+Output:
+40 
+
+4.//sumof all diagonal elements (left diagonal) in a 2D array 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      // int arr[][]={{1,2,3},{4,5,6},{7,8,9}};//compile time
+      int rsize=sc.nextInt();
+      int csize=sc.nextInt();
+      int arr[][]=new int [rsize][csize];
+      
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){
+          arr[i][j]=sc.nextInt();
+          
+        }
+      }
+      
+      int sum=0;
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){
+          
+          if(i==j){
+            sum+=arr[i][j];
+            
+          }
+          
+        }}
+      System.out.print(sum+" ");
+      
+    }
+}
+
+3
+3
+1 2 3 
+ 4 5 6
+7 8 9
+Output:
+15 
+5.//sumof all diagonal (left and right ) elements  diagonal in a 2D array 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      // int arr[][]={{1,2,3},{4,5,6},{7,8,9}};//compile time
+      int rsize=sc.nextInt();
+      int csize=sc.nextInt();
+      int arr[][]=new int [rsize][csize];
+      
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){
+          arr[i][j]=sc.nextInt();
+          
+        }
+      }
+      
+      int sum=0;
+      for(int i=0;i<rsize;i++){
+        for(int j=0;j<csize;j++){
+          
+          if(i==j|| i+j==rsize-1){
+            sum+=arr[i][j];
+            
+          }
+          
+        }}
+      System.out.print(sum+" ");
+      
+    }
+}
+
+3
+3
+1 2 3 
+ 4 5 6
+7 8 9
+Output:
+25 
+
+6.//
+  //String
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      // String str="India"; //used to give ip on compile time
+      String str=sc.next();
+      sc.nextLine();
+      String str1=sc.nextLine();
+      System.out.println(str);
+      System.out.println(str1);
+      
+      
+    }
+}
+
+Good morning
+have a nice day
+
+Output:
+
+Good
+have a nice day
+
+7.
+  //charAt()
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      String str="India is the champions "; //used to give ip on compile time
+      
+      System.out.println(str.charAt(4));
+      
+      
+    }
+}
+
+a
+
+  8.//compareTo();
+ 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      String str="India is the champions "; //used to give ip on compile time
+       String str2="India Is The Champions ";
+      System.out.println(str.compareTo(str2));//compares the ASCII value and displays the result if two strings are equal then it returns 0 otherwise the diff btwn two char
+      
+      
+    }
+}
+
+32
+
+9.// /compareToIgnoreCase
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      String str="India is the champions "; //used to give ip on compile time
+       String str2="India Is The Champions ";
+      System.out.println(str.compareToIgnoreCase(str2));
+      
+      
+    }
+}
+Output:
+0
+  
+10.// /contains
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      String str="India is the champions "; //used to give ip on compile time
+       String str2="champions ";
+      System.out.println(str.contains(str2));
+      
+      
+    }
+}
+Output:
+true
+11.//length,indexOf,lastIndexOf,isEmpty(),equals,equalsIgnoreCase
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      String str="India is the champions "; //used to give i/p in compile time
+       String str2="champions ";
+       String str3="CHAMPIONS";
+       System.out.println(str2.length());
+      System.out.println(str.indexOf(str2));
+      System.out.println(str.lastIndexOf(str2));
+      System.out.println(str.isEmpty());
+      System.out.println(str.equals(str3));
+      System.out.println(str.equalsIgnoreCase(str3));
+
+      
+      
+    }
+}
+Output:
+
+10
+13
+13
+false
+false
+false
+12.//replace,replace,replaceAll,replaceFirst,split()
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      String str="India is the champIons "; //used to give i/p in compile time
+      
+      System.out.println(str.replace('I','i'));
+      System.out.println(str.replaceFirst("I","i"));
+      System.out.println(str.replaceFirst("India","indiaa"));
+      
+      System.out.println(str.replaceAll("In","in"));
+      
+
+      
+      
+    }
+}
+Output:
+
+india is the champions 
+india is the champIons 
+indiaa is the champIons 
+india is the champIons 
+
+13.//split()
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      String str="India is the champIons "; //used to give i/p in compile time
+      String arr[]=str.split(" ");//it splits the string based on the "space"(if we give any character it works on it ) and stores them in the string array
+      for(int i=0;i<arr.length;i++){
+        System.out.println(arr[i]);
+      }
+      
+    }
+}
+Output:
+India
+is
+the
+champIons
+
+14.//trim,toUpperCase,toLowerCase,substring(starting index,ending index-1)
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      String str1="     India is the champIons        .   ";
+      String str="India is the champIons "; //used to give i/p in compile time
+      //trim
+       System.out.println(str1.trim());
+      // substring(starting index,ending index-1)
+      System.out.println(str.substring(0,5));
+      //toUpperCase()
+       System.out.println(str.toUpperCase());
+       //toLowerCase()
+       System.out.println(str.toLowerCase());
+      //toCharArray()
+      char ch[]=str.toCharArray();
+      System.out.println(Arrays.toString(ch));
+      
+    }
+}
+Output:
+India is the champIons        .
+India
+INDIA IS THE CHAMPIONS 
+india is the champions 
+[I, n, d, i, a,  , i, s,  , t, h, e,  , c, h, a, m, p, I, o, n, s,  ]
+
+
+
+  one compiler
+6.Take a string from the input and print the first character and last characters of the string together
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner (System.in);
+      String s=sc.nextLine();
+      int a=s.length();
+      char c=s.charAt(0);
+      char d=s.charAt(a-1);
+      
+      //System.out.print(Character.toString(c)+Character.toString(d));
+       System.out.print(s.charAt(0)+""+s.charAt(a-1));
+    }
+}
+Input:
+Hello World
+Output:
+Hd
+
+7.
+
+  
