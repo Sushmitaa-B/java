@@ -1,0 +1,126 @@
+class Node {
+	Node prev;
+	int data;
+	Node next;
+
+	Node(int data) {
+		this.data = data;
+		prev = null;
+		next = null;
+	}
+}
+
+class Doublylinkedlist {
+	Node head = null;
+	Node tail = null;
+	int size = 0;
+
+	// Add at last
+	void addatlast(int data) {
+		Node newnode = new Node(data);
+
+		if (head == null) {
+			head = tail = newnode;
+		} else {
+			tail.next = newnode;
+			newnode.prev = tail;
+			tail = newnode;
+		}
+		size++;
+	}
+
+
+	void deleteatlast() {
+		if(head==null) {
+			System.out.println("There is no element to delete");
+			return;
+		}
+
+		if(head==tail) {
+			head=tail=null;
+			System.out.println("All data are deleted");
+		}
+		else {
+			tail=tail.prev;
+			tail.next=null;
+		}
+		size--;
+	}
+	void deleteatbeg() {
+		if(head==null) {
+			System.out.println("There is no element to delete");
+			return;
+		}
+
+		if(head==tail) {
+			head=tail=null;
+			System.out.println("All data are deleted");
+		}
+		else {
+			head=head.next;
+			head.prev=null;
+		}
+		size--;
+	}
+	
+	void deleteatpos(int pos){
+	    if(pos<=0 || pos>size){
+	        System.out.println("Invalid pos");
+	        return;
+	    }
+	    
+	    if(pos==1){
+	        deleteatbeg();
+	        return;
+	    }
+	    if(pos==size){
+	        deleteatlast();
+	        return;
+	    }
+	    Node temp=head;
+	    for(int i=1;i<pos-1;i++){
+	        temp=temp.next;
+	    }
+	    
+	    Node temp1=temp.next;
+	    temp.next=temp1.next;
+	    temp.next.prev=temp;
+	}
+
+
+
+
+
+	// Display forward
+	 
+    void display() {
+        
+        Node temp = head;
+        if(head==null){
+            System.out.println("There is no element to print");
+        }
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+}
+
+public class Main {
+	public static void main(String[] args) {
+
+		Doublylinkedlist d = new Doublylinkedlist();
+
+		d.addatlast(200);
+		d.display();
+		d.addatlast(250);
+		d.display();
+		d.addatlast(300);
+		d.display();
+		d.addatlast(500);
+		d.display();
+		d.deleteatpos(2);
+		d.display();
+	}
+}
